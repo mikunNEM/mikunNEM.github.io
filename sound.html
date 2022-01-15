@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<title>音を鳴らす</title>
+
+</head>
+<body>
+
+    <p>音を鳴らす</p>
+    <p class="hako"><button id="btn20200502" style="font-size: 150px;">🛎</button></p>
+
+    <script>
+        window.onload = function() {
+            var my_audio = new Audio("https://github.com/symbol/desktop-wallet/raw/dev/src/views/resources/audio/ding2.ogg");
+            //var my_audio = new Audio("https://soundeffect-lab.info/sound/anime/mp3/kotsudumi1.mp3");
+            //ボタンにクリックイベントを設定
+            document.getElementById("btn20200502").onclick = function() {
+    //            alert("Sound Play");
+                my_audio.currentTime = 0;  //再生開始位置を先頭に戻す
+                my_audio.play();  //サウンドを再生
+            }
+        }
+    </script>
+
+</body>
+</html>
