@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<title>音を鳴らすボタン</title>
+
+</head>
+<body>
+
+    <p>ボタンを押してください</p>
+    <p class="hako"><button id="btn20200502" style="font-size: 150px;">🛎</button></p>
+
+    <script>
+    //    window.onload = function() {
+    //        var my_audio = new Audio("https://github.com/symbol/desktop-wallet/raw/dev/src/views/resources/audio/ding2.ogg");
+            //ボタンにクリックイベントを設定
+    //        document.getElementById("btn20200502").onclick = function() {
+    //            alert("Sound Play");
+    //            my_audio.currentTime = 0;  //再生開始位置を先頭に戻す
+    //            my_audio.play();  //サウンドを再生
+    //        }
+    //    }
+        window.onload = function() {
+    // ページ読み込みと同時にロード
+    wa.loadFile("https://github.com/symbol/desktop-wallet/raw/dev/src/views/resources/audio/ding2.ogg", function(buffer) {
+      // ユーザーイベント
+      var event = "click";
+      document.addEventListener(event, function() {
+        wa.play("ding2.ogg");
+      });
+    });
+  }
+      
+      
+      
+    </script>
+
+</body>
+</html>
